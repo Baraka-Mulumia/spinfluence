@@ -1,4 +1,5 @@
-import { Box, Text, VStack } from '@chakra-ui/react';
+import { Header } from '@/components/organisms/Header';
+import { Box, Container, Text, VStack } from '@chakra-ui/react';
 
 import { Inter } from '@next/font/google';
 
@@ -6,21 +7,10 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
-    <>
-      <main>
-        <Box>
-          <VStack
-            spacing={4}
-            w={'100vw'}
-            h={'100vh'}
-            alignItems="center"
-            justifyContent="center">
-            <Text fontSize="6xl" fontWeight="bold" className={inter.className}>
-              SpinFluence
-            </Text>
-          </VStack>
-        </Box>
-      </main>
-    </>
+    <Box as={'main'} bg={'gray.100'}>
+      <Container maxW={'container.xl'}>
+        <Header />
+      </Container>
+    </Box>
   );
 }
