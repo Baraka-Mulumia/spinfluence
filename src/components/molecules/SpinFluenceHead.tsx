@@ -13,7 +13,7 @@ type SeoProps = {
   lang?: string;
 };
 
-const SPHead: FunctionComponent<SeoProps> = ({
+export const SpinFluenceHead: FunctionComponent<SeoProps> = ({
   description = 'SpinFluence Solutions | We develop and deploy software solutions that help businesses grow and scale. We are a team of software engineers, designers, and project managers who are passionate about building software that solves real-world problems. ',
   author = 'SpinFluence Solutions',
   title = 'SpinFluence Solutions',
@@ -88,5 +88,3 @@ const SPHead: FunctionComponent<SeoProps> = ({
     </Head>
   );
 };
-
-export default SPHead;
