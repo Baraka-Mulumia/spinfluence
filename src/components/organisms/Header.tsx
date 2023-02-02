@@ -1,58 +1,43 @@
-import { NavigationItemType } from '@/types';
-import { FunctionComponent } from 'react';
+import { Box, Container, Stack } from '@chakra-ui/react';
+
 import { Branding } from '../atoms/Branding';
-
-import { Box, Stack, Button } from '@chakra-ui/react';
-import { NavBar } from '../molecules/NavBar';
 import { CtaButton } from '../atoms/CtaButton';
+import { FunctionComponent } from 'react';
+import { HiddenOnBreakPoint } from '../layout/HiddenOnBreakPoint';
+import { NavBar } from '../molecules/NavBar';
+import { NavigationDrawer } from '../molecules/NavigationDrawer';
+import { VisibleOnBreakPoint } from '../layout/VisibleOnBreakPoint';
 
-const navigationItems: NavigationItemType[] = [
-  {
-    label: 'Home',
-    path: 'home',
-    isSpy: true,
-  },
-  {
-    label: 'Services',
-    path: 'services',
-    isSpy: true,
-  },
-  {
-    label: 'Team',
-    path: 'team',
-    isSpy: true,
-  },
-  {
-    label: 'Stories',
-    path: 'stories',
-    isSpy: true,
-  },
-  {
-    label: 'Why Us',
-    path: 'why-us',
-    isSpy: true,
-  },
-  {
-    label: 'Contact Us',
-    path: 'contact-us',
-    isSpy: true,
-  },
-];
+// ! TODO: Add sticky header
 
 export const Header: FunctionComponent = () => {
   return (
-    <Stack
-      direction="row"
-      spacing={4}
-      alignItems="center"
-      w={'full'}
-      justifyContent="space-between"
-      py={4}>
-      <Box>
-        <Branding />
-      </Box>
-      <NavBar navigationItems={navigationItems} />
-      <CtaButton />
-    </Stack>
+    <Box as={'header'} bg={'white'} borderBottomWidth={1}>
+      <Container maxW={'container.xl'}>
+        <Stack
+          direction="row"
+          spacing={4}
+          alignItems="center"
+          w={'full'}
+          justifyContent="space-between"
+          py={4}>
+          <Box>
+            <Branding />
+          </Box>
+
+          <VisibleOnBreakPoint breakpoint="xxmd">
+            <NavBar />
+          </VisibleOnBreakPoint>
+
+          <VisibleOnBreakPoint breakpoint="xxmd">
+            <CtaButton />
+          </VisibleOnBreakPoint>
+
+          <HiddenOnBreakPoint breakpoint="xxmd">
+            <NavigationDrawer />
+          </HiddenOnBreakPoint>
+        </Stack>
+      </Container>
+    </Box>
   );
 };
