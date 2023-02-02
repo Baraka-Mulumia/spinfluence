@@ -1,18 +1,15 @@
 import { FunctionComponent } from 'react';
-import { DesktopNavItem } from '../atoms/NavItem.desktop';
+import { HStack } from '@chakra-ui/react';
+import { NavItem } from '../atoms/NavItem';
 import { map } from 'lodash';
-
-import { Box, HStack, Text, VStack } from '@chakra-ui/react';
-import { NavigationItemType } from '@/types';
+import { navigationItems } from '@/data/navigationList';
 import { randomId } from '@/functions';
 
-export const NavBar: FunctionComponent<{
-  navigationItems: NavigationItemType[];
-}> = ({ navigationItems }) => {
+export const NavBar: FunctionComponent = () => {
   return (
     <HStack>
       {map(navigationItems, (i) => (
-        <DesktopNavItem key={randomId()} {...i} />
+        <NavItem key={randomId()} {...i} variant={'desktop'} />
       ))}
     </HStack>
   );
