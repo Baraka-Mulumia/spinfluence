@@ -1,13 +1,16 @@
+import { Box, BoxProps } from '@chakra-ui/react';
 import { FunctionComponent, PropsWithChildren } from 'react';
 
-import { Box } from '@chakra-ui/react';
-
 export const VisibleOnBreakPoint: FunctionComponent<
-  PropsWithChildren<{
-    breakpoint: string;
-  }>
-> = ({ breakpoint, children }) => {
+  PropsWithChildren<
+    BoxProps & {
+      breakpoint: string;
+    }
+  >
+> = ({ breakpoint, children, ...props }) => {
   return (
-    <Box display={{ base: 'none', [breakpoint]: 'block' }}>{children}</Box>
+    <Box display={{ base: 'none', [breakpoint]: 'block' }} {...props}>
+      {children}
+    </Box>
   );
 };
