@@ -1,10 +1,12 @@
+import { Box, Stack, Text } from '@chakra-ui/react';
+
 import { FunctionComponent } from 'react';
-import { Box, Text, Stack } from '@chakra-ui/react';
 import Image from 'next/image';
 
+//TODO: Add a link to the home page
 export const Branding: FunctionComponent = () => {
   return (
-    <Stack direction="row" spacing={2} alignItems="center">
+    <Stack direction="row" spacing={2} alignItems="center" cursor="pointer">
       <Box>
         <Image
           src="/images/logo.png"
@@ -17,9 +19,9 @@ export const Branding: FunctionComponent = () => {
         <Text fontSize="md" color={'blue.500'} fontWeight={600}>
           Spinfluence
         </Text>
-        {/* <Text fontSize="xs" fontWeight={300}>
+        <Text fontSize="xs" fontWeight={300}>
           Solutions
-        </Text> */}
+        </Text>
       </Stack>
     </Stack>
   );

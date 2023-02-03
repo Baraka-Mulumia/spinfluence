@@ -29,16 +29,11 @@ export const Banner: FunctionComponent = () => {
             lineHeight={'shorter'}>
             Scaling your business with world-class software development
           </Text>
-          <Text fontSize={'sm'} color={'gray.500'}>
+          <Text fontSize={'md'} color={'gray.500'}>
             Award winning creative agency that helps you to build your brand and
             grow your business accross the world
           </Text>
-          <HStack spacing={4} mt={8}>
-            <CtaButton size={'lg'} fontSize={'lg'} />
-            <Box>
-              <Text fontSize={'lg'} color={'gray.500'}></Text>
-            </Box>
-          </HStack>
+          <CtaButton size={'lg'} fontSize={'lg'} mt={4} />
         </Stack>
 
         <VisibleOnBreakPoint breakpoint={'mxd'}>

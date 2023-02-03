@@ -30,7 +30,7 @@ export const DesktopNavItem: FunctionComponent<NavigationItemType> = ({
         transition: 'width 0.3s',
         mt: 1,
       }}>
-      <Text fontSize={'sm'}>{label}</Text>
+      <Text fontSize={'md'}>{label}</Text>
     </Stack>
   );
 };
