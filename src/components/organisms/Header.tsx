@@ -10,9 +10,16 @@ import { VisibleOnBreakPoint } from '../layout/VisibleOnBreakPoint';
 
 // ! TODO: Add sticky header
 
-export const Header: FunctionComponent = () => {
+export const Header: FunctionComponent<{
+  isSticky?: boolean;
+}> = ({ isSticky = false }) => {
   return (
-    <Box as={'header'} bg={'white'} borderBottomWidth={1}>
+    <Box
+      as={'header'}
+      borderBottomWidth={1}
+      boxShadow={isSticky ? 'md' : 'none'}
+      bg={isSticky ? 'white' : 'transparent'}
+      borderColor={isSticky ? 'gray.200' : 'transparent'}>
       <Container maxW={'container.xl'}>
         <Stack
           direction="row"
