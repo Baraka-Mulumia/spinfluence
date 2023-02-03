@@ -40,7 +40,7 @@ export const Header: FunctionComponent<{
             <CtaButton />
           </VisibleOnBreakPoint>
 
-          <HiddenOnBreakPoint breakpoint="lg">
+          <HiddenOnBreakPoint breakpoint="lg" zIndex={'overlay'}>
             <NavigationDrawer />
           </HiddenOnBreakPoint>
         </Stack>

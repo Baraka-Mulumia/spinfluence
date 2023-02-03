@@ -42,7 +42,7 @@ export default function Home() {
       <StickyContainer>
         <Sticky>
           {({ style }) => (
-            <Box style={style} zIndex={10000}>
+            <Box style={style} zIndex={'sticky'}>
               <Header isSticky={isSticky} />
             </Box>
           )}
