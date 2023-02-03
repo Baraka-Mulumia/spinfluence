@@ -1,10 +1,9 @@
-import { Box, HStack, Stack, Text, useMediaQuery } from '@chakra-ui/react';
+import { Box, Stack, Text, useMediaQuery } from '@chakra-ui/react';
 
 import { CtaButton } from '../atoms/CtaButton';
 import { FunctionComponent } from 'react';
 import Image from 'next/image';
 import { SectionContainer } from '../layout/SectionContainer';
-import { VisibleOnBreakPoint } from '../layout/VisibleOnBreakPoint';
 
 export const Banner: FunctionComponent = () => {
   const [isLarge] = useMediaQuery('(min-width: 1024px)');
@@ -36,16 +35,14 @@ export const Banner: FunctionComponent = () => {
           <CtaButton size={'lg'} fontSize={'lg'} mt={4} />
         </Stack>
 
-        <VisibleOnBreakPoint breakpoint={'mxd'}>
-          <Box position={'relative'}>
-            <Image
-              src={'/images/header-shape-2.png'}
-              width={isLarge ? 600 : 400}
-              height={isLarge ? 600 : 400}
-              alt={'header image'}
-            />
-          </Box>
-        </VisibleOnBreakPoint>
+        <Box position={'relative'}>
+          <Image
+            src={'/images/header-shape-2.png'}
+            width={isLarge ? 600 : 400}
+            height={isLarge ? 600 : 400}
+            alt={'header image'}
+          />
+        </Box>
       </Stack>
     </SectionContainer>
   );
