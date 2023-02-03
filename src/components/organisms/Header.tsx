@@ -25,15 +25,15 @@ export const Header: FunctionComponent = () => {
             <Branding />
           </Box>
 
-          <VisibleOnBreakPoint breakpoint="xxmd">
+          <VisibleOnBreakPoint breakpoint="lg">
             <NavBar />
           </VisibleOnBreakPoint>
 
-          <VisibleOnBreakPoint breakpoint="xxmd">
+          <VisibleOnBreakPoint breakpoint="lg">
             <CtaButton />
           </VisibleOnBreakPoint>
 
-          <HiddenOnBreakPoint breakpoint="xxmd">
+          <HiddenOnBreakPoint breakpoint="lg">
             <NavigationDrawer />
           </HiddenOnBreakPoint>
         </Stack>

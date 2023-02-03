@@ -12,11 +12,17 @@ const theme = extendTheme({
     sm: '360px',
     sxm: '480px',
     md: '640px',
-    xmd: '768px',
-    xxmd: '992px',
+    mxd: '768px',
+    lg: '992px',
     xl: '1024px',
     xxl: '1280px',
     xxxl: '1440px',
+  },
+
+  colors: {
+    blue_000: '#729DFE',
+    blue_100: '#334D88',
+    blue_200: '#6679A5',
   },
 });
 
