@@ -31,6 +31,7 @@ const theme = extendTheme({
     blue_000: '#729DFE',
     blue_100: '#334D88',
     blue_200: '#6679A5',
+    bg_000: '#F7F8FB',
   },
 
   styles: {
