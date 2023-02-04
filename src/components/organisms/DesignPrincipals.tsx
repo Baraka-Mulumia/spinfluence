@@ -52,7 +52,7 @@ export const DesignPrincipals: FunctionComponent = () => {
     autoHeight: true,
     autoplay: {
       waitForTransition: false,
-      delay: 6000,
+      delay: 4000,
     },
     breakpoints: {
       640: {
