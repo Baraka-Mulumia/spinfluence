@@ -3,9 +3,10 @@ import React, { FunctionComponent } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay } from 'swiper';
 
+import { BlockContainer } from '../layout/BlockContainer';
+import { BlockTitle } from '../molecules/BlockTitle';
 import { CoreValue } from '@/types';
 import { LeadText } from '../atoms/LeadText';
-import { SectionContainer } from '../layout/SectionContainer';
 import { SectionHeaderText } from '../atoms/SectionHeaderText';
 import { coreValues } from '@/data/coreValues';
 import { map } from 'lodash';
@@ -63,7 +64,7 @@ export const DesignPrincipals: FunctionComponent = () => {
   };
 
   return (
-    <SectionContainer
+    <BlockContainer
       bg={'bg_000'}
       alignItems={'start'}
       minH={'max-content'}
@@ -74,9 +75,7 @@ export const DesignPrincipals: FunctionComponent = () => {
       }}>
       <Stack spacing={10}>
         <Stack justifyContent={'center'} alignItems={'center'}>
-          <SectionHeaderText textTransform={'capitalize'}>
-            Yes, we can build that
-          </SectionHeaderText>
+          <BlockTitle title="Our Design Principles" text="Core Values" />
         </Stack>
         <HStack w={'full'} py={5}>
           <Swiper {...swipperSettings}>
@@ -88,6 +87,6 @@ export const DesignPrincipals: FunctionComponent = () => {
           </Swiper>
         </HStack>
       </Stack>
-    </SectionContainer>
+    </BlockContainer>
   );
 };

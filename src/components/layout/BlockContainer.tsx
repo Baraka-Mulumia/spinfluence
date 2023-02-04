@@ -1,9 +1,10 @@
 import { Box, BoxProps, Container, Stack } from '@chakra-ui/react';
 import { FunctionComponent, PropsWithChildren } from 'react';
 
-export const SectionContainer: FunctionComponent<
-  PropsWithChildren<BoxProps>
-> = ({ children, ...props }) => {
+export const BlockContainer: FunctionComponent<PropsWithChildren<BoxProps>> = ({
+  children,
+  ...props
+}) => {
   return (
     <Box
       as={'section'}

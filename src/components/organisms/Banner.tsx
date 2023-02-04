@@ -1,15 +1,15 @@
 import { Box, Stack, Text, useMediaQuery } from '@chakra-ui/react';
 
+import { BlockContainer } from '../layout/BlockContainer';
 import { CtaButton } from '../atoms/CtaButton';
 import { FunctionComponent } from 'react';
 import Image from 'next/image';
-import { SectionContainer } from '../layout/SectionContainer';
 
 export const Banner: FunctionComponent = () => {
   const [isLarge] = useMediaQuery('(min-width: 1024px)');
 
   return (
-    <SectionContainer
+    <BlockContainer
       bgImg={'url(/images/header-bg-2.png)'}
       backgroundRepeat={'no-repeat'}
       backgroundPosition={'right top'}>
@@ -44,6 +44,6 @@ export const Banner: FunctionComponent = () => {
           />
         </Box>
       </Stack>
-    </SectionContainer>
+    </BlockContainer>
   );
 };

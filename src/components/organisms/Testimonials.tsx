@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay } from 'swiper';
 import { chunk, map } from 'lodash';
 
+import { BlockTitle } from '../molecules/BlockTitle';
 import { LeadText } from '../atoms/LeadText';
 import { SectionHeaderText } from '../atoms/SectionHeaderText';
 import { TestimonialCard } from '../atoms/TestimonialCard';
@@ -53,10 +54,10 @@ export const Testimonials: FunctionComponent = () => {
       placeContent={'center'}
       placeItems={'center'}
       w={'full'}>
-      <Box>
-        <SectionHeaderText>What clients say about us</SectionHeaderText>
-        <LeadText>Customer Testimonaial</LeadText>
-      </Box>
+      <BlockTitle
+        title={'What clients say about us'}
+        text={'Customer Testimonaial'}
+      />
       <HStack w={'full'} py={5}>
         <Swiper {...testimonialCarousel}>
           {map(testimonialChunks, (item, index) => (

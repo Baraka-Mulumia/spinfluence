@@ -8,9 +8,10 @@ import {
   Text,
 } from '@chakra-ui/react';
 
+import { BlockContainer } from '../layout/BlockContainer';
+import { BlockTitle } from '../molecules/BlockTitle';
 import { FunctionComponent } from 'react';
 import { LeadText } from '../atoms/LeadText';
-import { SectionContainer } from '../layout/SectionContainer';
 import { SectionHeaderText } from '../atoms/SectionHeaderText';
 import WhyChoosUsTabPanel from '../molecules/WhyChoosUsTabPanel';
 import { map } from 'lodash';
@@ -43,23 +44,15 @@ const TabListItem: FunctionComponent<{
 
 export const WhyUsSection: FunctionComponent = () => {
   return (
-    <SectionContainer>
+    <BlockContainer>
       <Stack alignItems={'center'} spacing={{ base: 8, md: 10 }}>
         <Stack>
-          <SectionHeaderText textAlign={'center'}>
-            Why Choose Us
-          </SectionHeaderText>
-          <Box
-            maxW={{
-              base: 'full',
-              md: 'lg',
-            }}>
-            <LeadText>
-              We design, build, deploy and maintains bespoke software solutions
-              that allows start-ups and corporates to start, run and grow
-              world-class businesses.
-            </LeadText>
-          </Box>
+          <BlockTitle
+            title={'Why Choose Us'}
+            text={
+              'We design, build, deploy and maintains bespoke software solutions that allows start-ups and corporates to start, run and grow world-class businesses.'
+            }
+          />
         </Stack>
 
         <Tabs>
@@ -76,6 +69,6 @@ export const WhyUsSection: FunctionComponent = () => {
           </TabPanels>
         </Tabs>
       </Stack>
-    </SectionContainer>
+    </BlockContainer>
   );
 };
