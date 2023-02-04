@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from 'react';
 
 import { Banner } from '@/components/organisms/Banner';
 import { Box } from '@chakra-ui/react';
+import { DesignPrincipals } from '@/components/organisms/DesignPrincipals';
 import { Header } from '@/components/organisms/Header';
 import { ServicesSection } from '@/components/organisms/ServicesSection';
 import { WhyUsSection } from '@/components/organisms/WhyUsSection';
@@ -51,6 +52,7 @@ export default function Home() {
         <Banner />
         <ServicesSection />
         <WhyUsSection />
+        <DesignPrincipals />
       </StickyContainer>
     </Box>
   );

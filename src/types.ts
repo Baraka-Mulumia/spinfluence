@@ -19,3 +19,8 @@ export type WhyChooseUsType = {
   image: string;
   promises: string[];
 };
+
+export type CoreValue = {
+  title: string;
+  body: string;
+};
