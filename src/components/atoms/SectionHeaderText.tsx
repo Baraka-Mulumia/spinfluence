@@ -10,7 +10,6 @@ export const SectionHeaderText: FunctionComponent<
       fontWeight={'bold'}
       color={'blue.800'}
       lineHeight={'shorter'}
-      fontFamily={'heading'}
       {...props}>
       {children}
     </Text>
