@@ -1,11 +1,12 @@
 // chakra ui theme extended
 
-import { Roboto } from '@next/font/google';
+import { DM_Sans, Roboto } from '@next/font/google';
+
 import { extendTheme } from '@chakra-ui/react';
 
-// include all subsets and weights
-const roboto = Roboto({
-  weight: ['300', '400', '700', '900'],
+// DM Sans
+const dmSans = DM_Sans({
+  weight: ['400', '500', '700'],
   subsets: ['latin', 'latin-ext'],
   style: ['normal', 'italic'],
 });
@@ -38,7 +39,7 @@ const theme = extendTheme({
   styles: {
     global: {
       body: {
-        fontFamily: roboto.style.fontFamily,
+        fontFamily: dmSans.style.fontFamily,
       },
     },
   },

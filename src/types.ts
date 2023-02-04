@@ -24,3 +24,10 @@ export type CoreValue = {
   title: string;
   body: string;
 };
+
+export type Testimonial = {
+  name: string;
+  username: string;
+  text: string;
+  image: string;
+};

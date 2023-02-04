@@ -6,6 +6,7 @@ import { Box } from '@chakra-ui/react';
 import { DesignPrincipals } from '@/components/organisms/DesignPrincipals';
 import { Header } from '@/components/organisms/Header';
 import { ServicesSection } from '@/components/organisms/ServicesSection';
+import { Testimonials } from '@/components/organisms/Testimonials';
 import { WhyUsSection } from '@/components/organisms/WhyUsSection';
 
 export default function Home() {
@@ -53,6 +54,7 @@ export default function Home() {
         <ServicesSection />
         <WhyUsSection />
         <DesignPrincipals />
+        <Testimonials />
       </StickyContainer>
     </Box>
   );

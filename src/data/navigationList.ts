@@ -17,11 +17,11 @@ export const navigationItems: NavigationItemType[] = [
     path: 'why-us',
     isSpy: true,
   },
-  // {
-  //   label: 'Team',
-  //   path: 'team',
-  //   isSpy: true,
-  // },
+  {
+    label: 'Testimonials',
+    path: 'testimonials',
+    isSpy: true,
+  },
   {
     label: 'About Us',
     path: 'about-us',
