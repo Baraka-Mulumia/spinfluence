@@ -4,7 +4,16 @@ import { FunctionComponent } from 'react';
 import Image from 'next/image';
 
 //TODO: Add a link to the home page
-export const Branding: FunctionComponent = () => {
+
+type BrandingProps = {
+  isOnDarkBackground?: boolean;
+  size?: string;
+};
+
+export const Branding: FunctionComponent<BrandingProps> = ({
+  isOnDarkBackground = false,
+  size,
+}) => {
   return (
     <Stack direction="row" spacing={2} alignItems="center" cursor="pointer">
       <Box>
@@ -16,10 +25,13 @@ export const Branding: FunctionComponent = () => {
         />
       </Box>
       <Stack direction="column" spacing={0} justifyContent="center">
-        <Text fontSize="md" color={'blue.500'} fontWeight={600}>
+        <Text
+          fontSize={size == 'lg' ? 'xl' : 'md'}
+          color={isOnDarkBackground ? 'white' : 'blue.900'}
+          fontWeight={600}>
           Spinfluence
         </Text>
-        <Text fontSize="xs" fontWeight={300}>
+        <Text fontSize={size == 'lg' ? 'sm' : 'xs'} color={'gray.500'}>
           Solutions
         </Text>
       </Stack>
