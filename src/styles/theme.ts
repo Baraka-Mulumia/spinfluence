@@ -1,10 +1,10 @@
 // chakra ui theme extended
 
-import { Lato } from '@next/font/google';
+import { Roboto } from '@next/font/google';
 import { extendTheme } from '@chakra-ui/react';
 
 // include all subsets and weights
-const lato = Lato({
+const roboto = Roboto({
   weight: ['300', '400', '700', '900'],
   subsets: ['latin', 'latin-ext'],
   style: ['normal', 'italic'],
@@ -32,12 +32,13 @@ const theme = extendTheme({
     blue_100: '#334D88',
     blue_200: '#6679A5',
     bg_000: '#F7F8FB',
+    text_primary: '#343D48',
   },
 
   styles: {
     global: {
       body: {
-        fontFamily: lato.style.fontFamily,
+        fontFamily: roboto.style.fontFamily,
       },
     },
   },

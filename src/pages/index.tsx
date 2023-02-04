@@ -5,6 +5,7 @@ import { Banner } from '@/components/organisms/Banner';
 import { Box } from '@chakra-ui/react';
 import { Header } from '@/components/organisms/Header';
 import { ServicesSection } from '@/components/organisms/ServicesSection';
+import { WhyUsSection } from '@/components/organisms/WhyUsSection';
 
 export default function Home() {
   const [isSticky, setIsSticky] = useState(false);
@@ -49,6 +50,7 @@ export default function Home() {
         </Sticky>
         <Banner />
         <ServicesSection />
+        <WhyUsSection />
       </StickyContainer>
     </Box>
   );

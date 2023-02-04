@@ -1,8 +1,9 @@
 import { Grid, GridItem, Stack, Text } from '@chakra-ui/react';
 
 import { FunctionComponent } from 'react';
-import { HeadingText } from '../atoms/HeadingText';
+import { LeadText } from '../atoms/LeadText';
 import { SectionContainer } from '../layout/SectionContainer';
+import { SectionHeaderText } from '../atoms/SectionHeaderText';
 import { ServiceCard } from '../atoms/ServiceCard';
 import { map } from 'lodash';
 import { randomId } from '@/functions';
@@ -13,10 +14,11 @@ export const ServicesSection: FunctionComponent = () => {
     <SectionContainer bg={'bg_000'} py={4}>
       <Stack w={'full'} h={'full'} spacing={4}>
         <Stack spacing={2} pb={5}>
-          <HeadingText textAlign={'center'}>Our Best Services</HeadingText>
-          <Text textAlign={'center'} color={'gray.500'}>
-            Scale your business with our top quality services
-          </Text>
+          <SectionHeaderText textAlign={'center'}>
+            Our Best Services
+          </SectionHeaderText>
+
+          <LeadText>Scale your business with our top quality services</LeadText>
         </Stack>
         <Grid
           templateColumns={{

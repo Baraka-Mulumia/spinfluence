@@ -1,9 +1,8 @@
 import { FunctionComponent, PropsWithChildren } from 'react';
-
-import { Icon } from '@chakra-ui/react';
+import { Icon, IconProps } from '@chakra-ui/react';
 
 // custom icon component
-export const EIcon: FunctionComponent<PropsWithChildren<{}>> = ({
+export const EIcon: FunctionComponent<PropsWithChildren<IconProps>> = ({
   children,
   ...props
 }) => {

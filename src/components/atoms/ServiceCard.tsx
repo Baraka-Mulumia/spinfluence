@@ -2,8 +2,8 @@ import { Box, Button, Stack, Text } from '@chakra-ui/react';
 
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import { FunctionComponent } from 'react';
-import { HeadingText } from './HeadingText';
 import Image from 'next/image';
+import { SectionHeaderText } from './SectionHeaderText';
 import { ServiceType } from '@/types';
 
 // TODO: make link to services/:slug page
@@ -37,7 +37,7 @@ export const ServiceCard: FunctionComponent<ServiceType> = ({
         <Image src={image} width={60} height={60} alt={'header image'} />
       </Box>
       <Stack spacing={2}>
-        <HeadingText fontSize={'lg'}>{title}</HeadingText>
+        <SectionHeaderText fontSize={'lg'}>{title}</SectionHeaderText>
         <Text fontSize={'md'} color={'blue_100'}>
           {description}
         </Text>

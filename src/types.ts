@@ -11,3 +11,11 @@ export type ServiceType = {
   image: string;
   slug: string;
 };
+
+export type WhyChooseUsType = {
+  title: string;
+  tabName: string;
+  description: string;
+  image: string;
+  promises: string[];
+};

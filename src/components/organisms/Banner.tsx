@@ -25,7 +25,8 @@ export const Banner: FunctionComponent = () => {
             fontSize={'4xl'}
             fontWeight={'bold'}
             color={'blue.800'}
-            lineHeight={'shorter'}>
+            lineHeight={'shorter'}
+            fontFamily={'heading'}>
             Scaling your business with world-class software development
           </Text>
           <Text fontSize={'md'} color={'gray.500'}>
