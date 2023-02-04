@@ -16,7 +16,7 @@ export const services = [
   {
     title: 'Web App Development',
     description: 'Custom web app development',
-    body: `we world-class web applications that focus on enhancing your business' agility and efficiency with cutting-edge technology.`,
+    body: `we develop world-class web applications that focus on enhancing your business' agility and efficiency with cutting-edge technology.`,
     image: '/images/s/web-app-development.png',
     slug: 'web-development',
   },
