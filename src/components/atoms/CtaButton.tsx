@@ -6,7 +6,7 @@ import Link from 'next/link';
 export const CtaButton: FunctionComponent<ButtonProps> = (props) => {
   return (
     <Box>
-      <Link href={'/ignite'}>
+      <Link href={'/'}>
         <Button
           variant="outline"
           fontSize={'sm'}
