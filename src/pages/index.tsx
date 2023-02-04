@@ -52,8 +52,8 @@ export default function Home() {
         </Sticky>
         <Banner />
         <ServicesSection />
-        <WhyUsSection />
         <DesignPrincipals />
+        <WhyUsSection />
         <Testimonials />
       </StickyContainer>
     </Box>
