@@ -23,12 +23,6 @@ export const navigationItems: NavigationItemType[] = [
     isSpy: true,
   },
   {
-    label: 'About Us',
-    path: 'about-us',
-    isSpy: false,
-  },
-
-  {
     label: 'Contact Us',
     path: 'contact-us',
     isSpy: true,

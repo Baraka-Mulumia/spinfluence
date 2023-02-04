@@ -5,6 +5,7 @@ import { Banner } from '@/components/organisms/Banner';
 import { Box } from '@chakra-ui/react';
 import { DesignPrincipals } from '@/components/organisms/DesignPrincipals';
 import { FAQ } from '@/components/organisms/FAQ';
+import { Footer } from '@/components/organisms/Footer';
 import { Header } from '@/components/organisms/Header';
 import { ServicesSection } from '@/components/organisms/ServicesSection';
 import { Testimonials } from '@/components/organisms/Testimonials';
@@ -57,6 +58,7 @@ export default function Home() {
         <WhyUsSection />
         <Testimonials />
         <FAQ />
+        <Footer />
       </StickyContainer>
     </Box>
   );
