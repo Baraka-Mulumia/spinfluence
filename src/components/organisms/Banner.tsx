@@ -24,13 +24,14 @@ export const Banner: FunctionComponent = () => {
           <Text
             fontSize={'4xl'}
             fontWeight={'bold'}
+            textTransform={'capitalize'}
             color={'blue.800'}
             lineHeight={'shorter'}>
-            Scaling your business with world-class software development
+            Scaling your business with world-class software.
           </Text>
           <Text fontSize={'md'} color={'gray.500'}>
             Award winning creative agency that helps you to build your brand and
-            grow your business accross the world
+            grow your business accross the world.
           </Text>
           <CtaButton
             size={'lg'}

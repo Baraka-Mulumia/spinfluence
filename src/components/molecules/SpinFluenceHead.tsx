@@ -14,7 +14,7 @@ type SeoProps = {
 };
 
 export const SpinFluenceHead: FunctionComponent<SeoProps> = ({
-  description = 'SpinFluence Solutions | We develop and deploy software solutions that help businesses grow and scale. We are a team of software engineers, designers, and project managers who are passionate about building software that solves real-world problems. ',
+  description = 'SpinFluence Solutions | Scaling your business with world-class software.',
   author = 'SpinFluence Solutions',
   title = 'SpinFluence Solutions',
   iconUrl = '/app-logo.png',
