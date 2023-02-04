@@ -1,4 +1,4 @@
-import { Box, Flex, Stack } from '@chakra-ui/react';
+import { Box, Flex, HStack, Stack } from '@chakra-ui/react';
 import React, { FunctionComponent } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay } from 'swiper';
@@ -54,6 +54,12 @@ export const DesignPrincipals: FunctionComponent = () => {
       waitForTransition: false,
       delay: 6000,
     },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+    },
   };
 
   return (
@@ -72,13 +78,15 @@ export const DesignPrincipals: FunctionComponent = () => {
             Yes, we can build that
           </SectionHeaderText>
         </Stack>
-        <Swiper {...swipperSettings}>
-          {map(coreValues, (value, index) => (
-            <SwiperSlide key={index} virtualIndex={index}>
-              <DesignPrincipalItem {...value} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <HStack w={'full'} py={5}>
+          <Swiper {...swipperSettings}>
+            {map(coreValues, (value, index) => (
+              <SwiperSlide key={index} virtualIndex={index}>
+                <DesignPrincipalItem {...value} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </HStack>
       </Stack>
     </SectionContainer>
   );
