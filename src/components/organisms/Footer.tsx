@@ -19,21 +19,35 @@ export const Footer = () => {
         direction={'column'}
         bg={'rgba(2, 7, 24, 0.95)'}
         spacing={8}>
-        <Stack spacing={4}>
-          <Branding isOnDarkBackground={true} size={'lg'} />
-        </Stack>
-
         <Stack
-          direction={{
-            base: 'column',
-            md: 'row',
+          spacing={{
+            base: 8,
+            md: 4,
           }}
-          spacing={4}>
-          {map(navigationItems, (item) => (
-            <Text key={randomId()} fontSize={'sm'} color={'white'}>
-              {item.label}
-            </Text>
-          ))}
+          w={'full'}
+          direction={{
+            base: 'row',
+            md: 'column',
+          }}
+          justifyContent={{
+            base: 'space-evenly',
+            md: 'center',
+          }}
+          alignItems={'center'}>
+          <Branding isOnDarkBackground={true} size={'lg'} />
+
+          <Stack
+            direction={{
+              base: 'column',
+              md: 'row',
+            }}
+            spacing={4}>
+            {map(navigationItems, (item) => (
+              <Text key={randomId()} fontSize={'sm'} color={'white'}>
+                {item.label}
+              </Text>
+            ))}
+          </Stack>
         </Stack>
 
         <Stack
@@ -44,7 +58,8 @@ export const Footer = () => {
           spacing={{
             base: 4,
             md: 8,
-          }}>
+          }}
+          alignItems={'center'}>
           <Text fontSize={'sm'} color={'white'}>
             © 2022-{new Date().getFullYear()} Spinfluence Solutions. All rights
             reserved.
