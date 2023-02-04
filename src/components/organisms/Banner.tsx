@@ -32,7 +32,12 @@ export const Banner: FunctionComponent = () => {
             Award winning creative agency that helps you to build your brand and
             grow your business accross the world
           </Text>
-          <CtaButton size={'lg'} fontSize={'lg'} mt={4} />
+          <CtaButton
+            size={'lg'}
+            fontSize={'lg'}
+            mt={4}
+            text={'Start your project'}
+          />
         </Stack>
 
         <Box position={'relative'}>
