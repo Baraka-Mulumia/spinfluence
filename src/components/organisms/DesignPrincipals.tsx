@@ -1,20 +1,40 @@
-import { Box, Stack } from '@chakra-ui/react';
+import { Box, Flex, Stack } from '@chakra-ui/react';
+import React, { FunctionComponent } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Autoplay } from 'swiper';
 
 import { CoreValue } from '@/types';
-import { FunctionComponent } from 'react';
 import { LeadText } from '../atoms/LeadText';
 import { SectionContainer } from '../layout/SectionContainer';
 import { SectionHeaderText } from '../atoms/SectionHeaderText';
 import { coreValues } from '@/data/coreValues';
 import { map } from 'lodash';
-import { randomId } from '@/functions';
+
+SwiperCore.use([Autoplay]);
 
 const DesignPrincipalItem: FunctionComponent<CoreValue> = ({ title, body }) => {
   return (
-    <Stack spacing={4}>
+    <Stack
+      spacing={4}
+      w={'full'}
+      bg={'white'}
+      px={4}
+      py={5}
+      borderRadius={'md'}
+      boxShadow={'md'}
+      alignItems={'center'}
+      justifyContent={'center'}>
       <SectionHeaderText fontSize={'2xl'}>{title}</SectionHeaderText>
-      <Box h={32}>
-        <LeadText fontSize={'sm'} textAlign={'left'} color="text_primary">
+      <Box
+        h={{
+          base: 'auto',
+          mxd: 36,
+        }}
+        maxW={{
+          base: 'full',
+          mxd: '2xl',
+        }}>
+        <LeadText textAlign={'justify'} color="text_primary">
           {body}
         </LeadText>
       </Box>
@@ -23,6 +43,19 @@ const DesignPrincipalItem: FunctionComponent<CoreValue> = ({ title, body }) => {
 };
 
 export const DesignPrincipals: FunctionComponent = () => {
+  const swipperSettings = {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    speed: 1000,
+    centeredSlides: true,
+    autoHeight: true,
+    autoplay: {
+      waitForTransition: false,
+      delay: 6000,
+    },
+  };
+
   return (
     <SectionContainer
       bg={'bg_000'}
@@ -35,33 +68,17 @@ export const DesignPrincipals: FunctionComponent = () => {
       }}>
       <Stack spacing={10}>
         <Stack justifyContent={'center'} alignItems={'center'}>
-          <SectionHeaderText>Yes, we can build that</SectionHeaderText>
-
-          <Box
-            maxW={{
-              base: 'full',
-              md: '2xl',
-            }}>
-            <LeadText>
-              We have the expertise, experience, and resources to complete this
-              task effectively and efficiently. Our team has a proven track
-              record of delivering high-quality solutions, and we are confident
-              in our ability to meet your requirements and exceed your
-              expectations.
-            </LeadText>
-          </Box>
+          <SectionHeaderText textTransform={'capitalize'}>
+            Yes, we can build that
+          </SectionHeaderText>
         </Stack>
-
-        <Stack
-          direction={{
-            base: 'column',
-            md: 'row',
-          }}
-          spacing={8}>
-          {map(coreValues.slice(0, 3), (value) => (
-            <DesignPrincipalItem key={randomId()} {...value} />
+        <Swiper {...swipperSettings}>
+          {map(coreValues, (value, index) => (
+            <SwiperSlide key={index} virtualIndex={index}>
+              <DesignPrincipalItem {...value} />
+            </SwiperSlide>
           ))}
-        </Stack>
+        </Swiper>
       </Stack>
     </SectionContainer>
   );
