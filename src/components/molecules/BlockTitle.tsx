@@ -19,7 +19,7 @@ export const BlockTitle: FunctionComponent<BlockTitleProps> = ({
       justifyContent={'center'}
       alignItems={'center'}
       w={'full'}>
-      <SectionHeaderText textTransform={'capitalize'}>
+      <SectionHeaderText textAlign={'center'} textTransform={'capitalize'}>
         {title}
       </SectionHeaderText>
       <LeadText>{text}</LeadText>
