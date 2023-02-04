@@ -42,7 +42,7 @@ export const ServiceCard: FunctionComponent<ServiceType> = ({
           {description}
         </Text>
         <Box h={16}>
-          <Text fontSize={'sm'} color={'gray.500'} noOfLines={3}>
+          <Text fontSize={'sm'} color={'text_primary'} noOfLines={3}>
             {body}
           </Text>
         </Box>
