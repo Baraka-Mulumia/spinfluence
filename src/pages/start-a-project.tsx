@@ -1,4 +1,4 @@
-import { Box, Stack, Text } from '@chakra-ui/react';
+import { Stack, Text } from '@chakra-ui/react';
 
 import { BlockContainer } from '@/components/layout/BlockContainer';
 import { ContactForm } from '@/components/molecules/ContactForm';
@@ -7,6 +7,7 @@ import { Footer } from '@/components/organisms/Footer';
 import { FunctionComponent } from 'react';
 import { MiniHeader } from '../components/molecules/MiniHeader';
 import { NextPage } from 'next';
+import { PageCOntentContainer } from '@/components/layout/PageCOntentContainer';
 import { map } from 'lodash';
 import { randomId } from '@/functions';
 
@@ -51,9 +52,7 @@ const TakeAwayItems = [
 
 const StartProjectPage: NextPage = () => {
   return (
-    <Box>
-      <MiniHeader />
-
+    <PageCOntentContainer Nav={MiniHeader}>
       <BlockContainer>
         <Stack
           direction={{
@@ -95,7 +94,7 @@ const StartProjectPage: NextPage = () => {
         </Stack>
       </BlockContainer>
       <Footer variant="mini" />
-    </Box>
+    </PageCOntentContainer>
   );
 };
 
