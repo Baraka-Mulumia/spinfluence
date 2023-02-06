@@ -10,7 +10,7 @@ export const CtaButton: FunctionComponent<
 > = ({ text = 'Get Started', ...props }) => {
   return (
     <Box>
-      <Link href={'/'}>
+      <Link href={'/start-a-project'}>
         <Button
           variant="outline"
           fontSize={'sm'}
