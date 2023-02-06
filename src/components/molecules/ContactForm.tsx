@@ -23,9 +23,11 @@ let companySizeOptions = [
   '1000+',
 ];
 
-export const ContactForm: FunctionComponent = () => {
+export const ContactForm: FunctionComponent<{
+  size?: string;
+}> = ({ size = '2xl' }) => {
   return (
-    <Stack maxW={'2xl'} p={3}>
+    <Stack maxW={size} p={3}>
       <form>
         <Stack spacing={4}>
           <Stack spacing={4} direction={{ base: 'column', md: 'row' }}>
