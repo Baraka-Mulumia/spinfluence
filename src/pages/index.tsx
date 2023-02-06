@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from 'react';
 
 import { Banner } from '@/components/organisms/Banner';
 import { Box } from '@chakra-ui/react';
+import { ContactUs } from '@/components/organisms/ContactUs';
 import { DesignPrincipals } from '@/components/organisms/DesignPrincipals';
 import { FAQ } from '@/components/organisms/FAQ';
 import { Footer } from '@/components/organisms/Footer';
@@ -58,6 +59,7 @@ export default function Home() {
         <WhyUsSection />
         <Testimonials />
         <FAQ />
+        <ContactUs />
         <Footer />
       </StickyContainer>
     </Box>
