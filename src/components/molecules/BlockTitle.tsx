@@ -1,4 +1,4 @@
-import { Stack, TextProps } from '@chakra-ui/react';
+import { Box, Stack, TextProps } from '@chakra-ui/react';
 
 import { FunctionComponent } from 'react';
 import { LeadText } from '../atoms/LeadText';
@@ -22,7 +22,9 @@ export const BlockTitle: FunctionComponent<BlockTitleProps> = ({
       <SectionHeaderText textAlign={'center'} textTransform={'capitalize'}>
         {title}
       </SectionHeaderText>
-      <LeadText>{text}</LeadText>
+      <Box maxW={'md'}>
+        <LeadText>{text}</LeadText>
+      </Box>
     </Stack>
   );
 };
