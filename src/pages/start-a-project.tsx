@@ -81,7 +81,7 @@ const StartProjectPage: NextPage = () => {
               Book your free consultation now
             </Text>
             <Text color={'gray.500'}>
-              Schedule a 30-min SovTech Explained and let&apos;s discuss:
+              Schedule a 30-min Spinfluence Explained and let&apos;s discuss:
             </Text>
 
             <Stack p={2}>

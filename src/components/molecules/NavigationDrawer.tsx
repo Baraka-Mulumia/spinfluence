@@ -17,6 +17,7 @@ import { FunctionComponent, useRef } from 'react';
 
 import { Branding } from '../atoms/Branding';
 import { CtaButton } from '../atoms/CtaButton';
+import Link from 'next/link';
 import { MenuIcon } from '@/assets/icons/MenuIcon';
 import { NavItem } from '../atoms/NavItem';
 import { navigationItems } from '@/data/navigationList';
@@ -52,7 +53,7 @@ export const NavigationDrawer: FunctionComponent = () => {
               onClick={onClose}
               isOnDarkBackground={true}
               size={'lg'}
-              asSpyLink
+              asSpyLink={true}
             />
           </DrawerHeader>
 
@@ -74,7 +75,9 @@ export const NavigationDrawer: FunctionComponent = () => {
             <Divider borderColor={'blue.300'} />
 
             <VStack pt={10}>
-              <CtaButton />
+              <Link href={'/start-a-project'}>
+                <CtaButton text={'Start a Project'} />
+              </Link>
             </VStack>
           </DrawerBody>
 
