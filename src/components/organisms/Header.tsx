@@ -8,8 +8,6 @@ import { NavBar } from '../molecules/NavBar';
 import { NavigationDrawer } from '../molecules/NavigationDrawer';
 import { VisibleOnBreakPoint } from '../layout/VisibleOnBreakPoint';
 
-// ! TODO: Add sticky header
-
 export const Header: FunctionComponent<{
   isSticky?: boolean;
 }> = ({ isSticky = false }) => {
@@ -29,7 +27,7 @@ export const Header: FunctionComponent<{
           justifyContent="space-between"
           py={4}>
           <Box>
-            <Branding />
+            <Branding asSpyLink />
           </Box>
 
           <VisibleOnBreakPoint breakpoint="lg">

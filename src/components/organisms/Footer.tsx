@@ -2,6 +2,7 @@ import { Box, Link, Stack, Text } from '@chakra-ui/react';
 
 import { Branding } from '../atoms/Branding';
 import { FavoriteIcon } from '@/assets/icons/FavoriteIcon';
+import { FooterNavItem } from '../atoms/FooterNavItem';
 import { SubscribeToNewsletterForm } from '../atoms/SubscribeToNewsletterForm';
 import { map } from 'lodash';
 import { navigationItems } from '@/data/navigationList';
@@ -34,7 +35,7 @@ export const Footer = () => {
             md: 'center',
           }}
           alignItems={'center'}>
-          <Branding isOnDarkBackground={true} size={'lg'} />
+          <Branding isOnDarkBackground={true} size={'lg'} asSpyLink />
 
           <Stack
             direction={{
@@ -43,9 +44,7 @@ export const Footer = () => {
             }}
             spacing={4}>
             {map(navigationItems, (item) => (
-              <Text key={randomId()} fontSize={'sm'} color={'white'}>
-                {item.label}
-              </Text>
+              <FooterNavItem key={randomId()} {...item} />
             ))}
           </Stack>
         </Stack>

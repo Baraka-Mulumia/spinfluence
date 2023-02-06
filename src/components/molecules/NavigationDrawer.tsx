@@ -1,4 +1,5 @@
 import {
+  Box,
   Divider,
   Drawer,
   DrawerBody,
@@ -44,10 +45,15 @@ export const NavigationDrawer: FunctionComponent = () => {
         onClose={onClose}
         finalFocusRef={btnRef}>
         <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton mt={'2'} />
+        <DrawerContent bg={'rgba(2, 7, 24, 0.95)'}>
+          <DrawerCloseButton mt={'2'} color={'white'} />
           <DrawerHeader>
-            <Branding />
+            <Branding
+              onClick={onClose}
+              isOnDarkBackground={true}
+              size={'lg'}
+              asSpyLink
+            />
           </DrawerHeader>
 
           <DrawerBody>
@@ -61,6 +67,7 @@ export const NavigationDrawer: FunctionComponent = () => {
                   path={item.path}
                   label={item.label}
                   variant={'mobile'}
+                  onClick={onClose}
                 />
               ))}
             </VStack>
@@ -72,9 +79,9 @@ export const NavigationDrawer: FunctionComponent = () => {
           </DrawerBody>
 
           <DrawerFooter justifyContent={'center'}>
-            <Text fontSize={'xs'}>
+            <Text fontSize={'xs'} color={'white'}>
               Powered by
-              <Text as={'span'} color={'blue.500'}>
+              <Text as={'span'} color={'yellow'}>
                 {' '}
                 spinfluece solutions
               </Text>

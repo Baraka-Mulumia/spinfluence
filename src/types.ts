@@ -2,6 +2,7 @@ export type NavigationItemType = {
   label: string;
   path: string;
   isSpy?: boolean;
+  onClick?: () => void;
 };
 
 export type ServiceType = {

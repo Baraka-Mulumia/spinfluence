@@ -1,9 +1,11 @@
-import { Box, Button, HStack, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Stack, Text } from '@chakra-ui/react';
 
 import { BlockContainer } from '../layout/BlockContainer';
 import { BlockTitle } from '../molecules/BlockTitle';
+import { EButton } from '../atoms/EButton';
 import { FAQ_Questions } from '../molecules/FAQ_Questions';
 import { FunctionComponent } from 'react';
+import { SpyLink } from '../atoms/SpyLink';
 
 export const FAQ: FunctionComponent = () => {
   return (
@@ -40,24 +42,11 @@ export const FAQ: FunctionComponent = () => {
             If your question is not list here, please feel free to make a manual
             support.
           </Text>
-          <Box pt={5}>
-            <Button
-              variant="outline"
-              fontSize={'sm'}
-              bg={'blue.900'}
-              color={'white'}
-              size={'md'}
-              fontWeight={'bold'}
-              borderRadius={'4px'}
-              _hover={{
-                bg: 'blue.900',
-                color: 'white',
-                transition: 'all 0.3s ease-in-out',
-                boxShadow: '0 0 0 0.5px #3182ce',
-              }}>
-              Ask your question
-            </Button>
-          </Box>
+          <SpyLink path="contact-us">
+            <Box pt={5}>
+              <EButton text={'    Ask your question'} />
+            </Box>
+          </SpyLink>
         </Stack>
       </Stack>
     </BlockContainer>
