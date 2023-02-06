@@ -8,6 +8,7 @@ type EButtonProps = ButtonProps & {
 
 export const EButton: FunctionComponent<EButtonProps> = ({
   text = 'Get Started',
+  ...props
 }) => {
   return (
     <Button
@@ -23,7 +24,8 @@ export const EButton: FunctionComponent<EButtonProps> = ({
         color: 'white',
         transition: 'all 0.3s ease-in-out',
         boxShadow: '0 0 0 0.5px #3182ce',
-      }}>
+      }}
+      {...props}>
       {text}
     </Button>
   );
