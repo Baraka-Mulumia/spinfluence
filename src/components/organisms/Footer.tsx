@@ -3,12 +3,15 @@ import { Box, Link, Stack, Text } from '@chakra-ui/react';
 import { Branding } from '../atoms/Branding';
 import { FavoriteIcon } from '@/assets/icons/FavoriteIcon';
 import { FooterNavItem } from '../atoms/FooterNavItem';
+import { FunctionComponent } from 'react';
 import { SubscribeToNewsletterForm } from '../atoms/SubscribeToNewsletterForm';
 import { map } from 'lodash';
 import { navigationItems } from '@/data/navigationList';
 import { randomId } from '@/functions';
 
-export const Footer = () => {
+export const Footer: FunctionComponent<{
+  variant?: 'default' | 'mini';
+}> = ({ variant = 'default' }) => {
   return (
     <Box>
       <SubscribeToNewsletterForm />
@@ -35,18 +38,25 @@ export const Footer = () => {
             md: 'center',
           }}
           alignItems={'center'}>
-          <Branding isOnDarkBackground={true} size={'lg'} asSpyLink />
+          <Branding
+            isOnDarkBackground={true}
+            size={'lg'}
+            asSpyLink={variant === 'default'}
+            asLink={variant === 'mini'}
+          />
 
-          <Stack
-            direction={{
-              base: 'column',
-              md: 'row',
-            }}
-            spacing={4}>
-            {map(navigationItems, (item) => (
-              <FooterNavItem key={randomId()} {...item} />
-            ))}
-          </Stack>
+          {variant === 'default' && (
+            <Stack
+              direction={{
+                base: 'column',
+                md: 'row',
+              }}
+              spacing={4}>
+              {map(navigationItems, (item) => (
+                <FooterNavItem key={randomId()} {...item} />
+              ))}
+            </Stack>
+          )}
         </Stack>
 
         <Stack
