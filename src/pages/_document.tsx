@@ -10,8 +10,10 @@ import { ColorModeScript } from '@chakra-ui/react';
 import createCache from '@emotion/cache';
 import createEmotionServer from '@emotion/server/create-instance';
 
+const emotionKey = 'emotion-css';
+
 const emotionCache = createCache({
-  key: 'css',
+  key: emotionKey,
 });
 
 const APP_NAME = 'SpinFluence Solutions';
@@ -27,7 +29,7 @@ class MyDocument extends Document {
       styles: [
         initialProps.styles,
         <style
-          key="emotion-css"
+          key={emotionKey}
           dangerouslySetInnerHTML={{ __html: styles.css }}
           data-emotion-css={styles.ids.join(' ')}
         />,
@@ -50,17 +52,6 @@ class MyDocument extends Document {
 
           <meta name="mobile-web-app-capable" content="yes" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossOrigin={'anonymous'}
-          />
-          <link
-            href={
-              'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;500;600;700;800;900&display=swap'
-            }
-            rel={'stylesheet'}
-          />
         </Head>
         <body>
           <ColorModeScript initialColorMode={'light'} />

@@ -67,7 +67,6 @@ const StartProjectPage: NextPage = () => {
               textTransform={'uppercase'}
               fontWeight={700}
               letterSpacing={'wide'}
-              fontFamily={'mono'}
               color={'blue'}>
               Start a project
             </Text>
