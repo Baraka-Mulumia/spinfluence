@@ -73,12 +73,7 @@ export const Footer: FunctionComponent<{
             © 2022-{new Date().getFullYear()} Spinfluence Solutions. All rights
             reserved.
           </Text>
-          <Text fontSize={'sm'} color={'white'}>
-            Built with <FavoriteIcon /> by{' '}
-            <Link isExternal href="https://iambaraka.dev" color={'yellow'}>
-              iambaraka.dev
-            </Link>
-          </Text>
+          
         </Stack>
       </Stack>
     </Box>
